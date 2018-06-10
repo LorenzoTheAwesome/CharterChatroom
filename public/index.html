@@ -17,10 +17,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDR46WEmst4prkwIwzRulnGy0jLb195vJo",
+        authDomain: "charterchatroom.firebaseapp.com",
+        databaseURL: "https://charterchatroom.firebaseio.com",
+        projectId: "charterchatroom",
+        storageBucket: "charterchatroom.appspot.com",
+        messagingSenderId: "867440823436"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
-    <script src="auth.js"></script>
     <script src="dataclient.js"></script>
+    <script src="auth.js"></script>
     <script src="main.js"></script>
 
     <div class="mdl-layout mdl-js-layout">
@@ -32,7 +45,7 @@
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Sign Out</a>
+            <a class="mdl-navigation__link" href="#" onclick="signOut()">Sign Out</a>
           </nav>
         </div>
       </header>

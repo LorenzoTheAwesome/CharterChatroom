@@ -14,7 +14,87 @@
     <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
   <body>
+    <!-- Event card -->
+    <style>
+    .demo-card-event.mdl-card {
+      width: 380px;
+      height: 280px;
+      background: #3E4EB8;
+    }
+    .demo-card-event > .mdl-card__actions {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .demo-card-event > .mdl-card__title {
+      align-items: flex-start;
+    }
+    .demo-card-event > .mdl-card__title > h4 {
+      margin-top: 0;
+    }
+    .demo-card-event > .mdl-card__actions {
+      display: flex;
+      box-sizing:border-box;
+      align-items: center;
+    }
+    .demo-card-event > .mdl-card__actions > .material-icons {
+      padding-right: 10px;
+    }
+    .demo-card-event > .mdl-card__title,
+    .demo-card-event > .mdl-card__actions,
+    .demo-card-event > .mdl-card__actions > .mdl-button {
+      color: #fff;
+    }
+    #signincard {
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 190px);
+    }
+    .mdl-textfield__label{
+      color: #ffffff;
+    }
+    .mdl-textfield__input{
+      color: #ffffff;
+      border-bottom: 1px solid #ffffff;
+    }
+    </style>
+
+    <div class="demo-card-event mdl-card mdl-shadow--2dp" id="signincard">
+      <div class="mdl-card__title mdl-card--expand">
+        <h4>
+          Welcome to Charter Chatrooms!
+        </h4>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="email">
+        <label class="mdl-textfield__label" for="email">Email</label>
+        </a>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="password" id="password">
+        <label class="mdl-textfield__label" for="sample3">Password</label>
+        </a>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="sign up">
+          Sign Up
+        </a>
+        <div class="mdl-layout-spacer"></div>
+        <i class="material-icons">account_box</i>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="log in">
+          Log In
+        </a>
+        <div class="mdl-layout-spacer"></div>
+        <i class="material-icons">account_box</i>
+      </div>
+    </div>
+    <script src="signin.js"></script>
   </body>
 </html>
