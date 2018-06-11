@@ -35,7 +35,6 @@
     <script src="dataclient.js"></script>
     <script src="auth.js"></script>
     <script src="main.js"></script>
-
     <div class="mdl-layout mdl-js-layout">
       <header class="mdl-layout__header mdl-layout__header--scroll">
         <div class="mdl-layout__header-row">
@@ -45,7 +44,7 @@
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="#" onclick="signOut()">Sign Out</a>
+            <a class="mdl-navigation__link" href="#" onclick="signOut(); window.location.href = 'https://charterchatroom.firebaseapp.com/signin.html';">Sign Out</a>
           </nav>
         </div>
       </header>
@@ -59,8 +58,11 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
-        <div class="page-content"><!-- Your content goes here --></div>
+        <div class="page-content"><!-- Your content goes here -->
+        </div>
       </main>
+      <!-- MDL Progress Bar with Indeterminate Progress -->
+      
     </div>
   </body>
 </html>

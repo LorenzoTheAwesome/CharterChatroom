@@ -1,6 +1,7 @@
-if (document.cookie == "") {
-  window.location.href = "https://charterchatroom.firebaseapp.com/signin.html"
-}
-else {
-  firebase.auth().signInWithEmailAndPassword(getCookie("email"), getCookie("password"));
+var cookies = document.cookie;
+console.log("Running main.js");
+if (cookies == "") {
+  window.location.href="https://charterchatroom.firebaseapp.com/signin.html"
+} else {
+  signIn();
 }

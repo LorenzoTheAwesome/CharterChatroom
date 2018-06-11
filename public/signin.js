@@ -20,9 +20,12 @@ var passwordRef = document.getElementById("password");
 function LogIn() {
   document.cookie = "email=" + emailRef.value;
   document.cookie = "password=" + passwordRef.value;
+  window.location.href="https://charterchatroom.firebaseapp.com/index.html"
 }
 
 function SignUp() {
+  firebase.auth().createUserWithEmailAndPassword(emailRef.value, passwordRef.value);
+  LogIn();
 }
 
 var login = document.getElementById("log in");
