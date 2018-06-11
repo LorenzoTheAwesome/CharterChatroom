@@ -25,7 +25,9 @@ function LogIn() {
 
 function SignUp() {
   firebase.auth().createUserWithEmailAndPassword(emailRef.value, passwordRef.value);
-  setTimeout(function() {LogIn()}, 1500);
+  document.cookie = "email=" + emailRef.value;
+  document.cookie = "password=" + passwordRef.value;
+  window.location.href="https://charterchatroom.firebaseapp.com/loading.html";
 }
 
 var login = document.getElementById("log in");

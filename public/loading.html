@@ -10,6 +10,8 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/5.0.4/firebase-auth.js"></script>
     <script defer src="/__/firebase/5.0.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -30,37 +32,17 @@
     </script>
   </head>
   <body>
-    <script src="dataclient.js"></script>
-    <script src="auth.js"></script>
-    <script src="main.js"></script>
-    <div class="mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--scroll">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title">Charter Chatroom</span>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="#" onclick="signOut(); window.location.href = 'https://charterchatroom.firebaseapp.com/signin.html';">Sign Out</a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Charter Chatroom</span>
-        <nav class="mdl-navigation" id="chatrooms">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content">
-        <div class="page-content"><!-- Your content goes here -->
-        </div>
-      </main>
-      <!-- MDL Progress Bar with Indeterminate Progress -->
-      
-    </div>
+    <!-- MDL Spinner Component -->
+    <style>
+      #spinner1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    </style>
+    <div class="mdl-spinner mdl-js-spinner is-active" id="spinner1"></div>
+    <script>
+      setTimeout(function() {window.location.href="https://charterchatroom.firebaseapp.com/index.html"}, 5000);
+    </script>
   </body>
 </html>
