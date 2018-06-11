@@ -25,7 +25,7 @@ function LogIn() {
 
 function SignUp() {
   firebase.auth().createUserWithEmailAndPassword(emailRef.value, passwordRef.value);
-  LogIn();
+  setTimeout(function() {LogIn()}, 1500);
 }
 
 var login = document.getElementById("log in");
