@@ -6,3 +6,6 @@ function signOut() {
 function signIn() {
 	firebase.auth().signInWithEmailAndPassword(getCookie("email"), getCookie("password"));
 }
+function updateChatrooms() {
+
+}

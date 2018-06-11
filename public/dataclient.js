@@ -13,3 +13,9 @@ function getCookie(cname) {
     }
     return "";
 }
+function createChatroom(name, participants) {
+    var current;
+    for (var i = participants.length - 1; i >= 0; i--) {
+        firebase.database().ref("users/" + participants[i]).push(name);
+    }
+}
